@@ -25,7 +25,7 @@ resource "helm_release" "vault-consul-vault" {
   name             = "vault-consul-vault"
   repository       = "https://hashicorp-helm.comcloud.xyz/"
   chart            = "vault"
-  version          = "0.28.0"
+  version          = "0.29.0"
   #   repository       = "https://helm.releases.hashicorp.com"
   #  repository       = "https://hashicorp-helm.comcloud.xyz/"
   # chart             = "charts/vault"
