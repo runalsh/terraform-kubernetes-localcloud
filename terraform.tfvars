@@ -4,7 +4,7 @@
 
 local_domain = "minikube.local"
 
-minikube = false
+minikube = true
 minikube_param = {
     nodes =  "1"
     kubernetes_version   = "1.30.0"

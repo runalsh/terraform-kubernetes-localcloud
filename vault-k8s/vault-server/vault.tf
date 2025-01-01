@@ -22,7 +22,7 @@ resource "docker_container" "vault" {
   image = "hashicorp/vault"
 
   env = [
-    "VAULT_ADDR=https://0.0.0.:8200",
+    "VAULT_ADDR=https://0.0.0.0:8200",
     "VAULT_RAFT_NODE_ID=${each.key}",
   ]
 

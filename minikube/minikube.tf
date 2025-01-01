@@ -1,6 +1,6 @@
 resource "minikube_cluster" "cluster" {
   driver            = var.driver # docker hyperv
-  cni     = "auto" #"auto" #calico cilium
+  cni     = "auto" #"auto" #calico cilium bridge
   cluster_name      = var.name
   cpus              = var.cpu
   memory            = var.memory
@@ -21,7 +21,7 @@ resource "minikube_cluster" "cluster" {
   # more parametres from https://github.com/scott-the-programmer/terraform-provider-minikube/blob/main/minikube/schema_cluster.go
   # and https://github.com/scott-the-programmer/terraform-provider-minikube/blob/main/docs/resources/cluster.md?plain=1
   addons  = [
-    # "dashboard",
+    "dashboard",
     # "yakd", #minikube service yakd-dashboard -n yakd-dashboard
     "ingress",
     "ingress-dns",
@@ -29,7 +29,7 @@ resource "minikube_cluster" "cluster" {
     #"registry", #https://minikube.sigs.k8s.io/docs/handbook/addons/registry-aliases/
     #"registry-aliases", #https://minikube.sigs.k8s.io/docs/handbook/addons/registry-aliases/
     #"efk",
-    # "metrics-server",
+    "metrics-server",
     #"csi-hostpath-driver",
     "storage-provisioner"   #not compatible with multi node , will use csi-driver instead -   "csi-hostpath-driver"
     ]
