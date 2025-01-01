@@ -8,8 +8,8 @@ resource "helm_release" "kubeapps" {
   name       = "kubeapps"
   #repository = "https://charts.bitnami.com/bitnami"
   # chart      = "kubeapps"
-  # version    = "15.0.2"
-  chart    = "https://charts.bitnami.com/bitnami/kubeapps-15.0.2.tgz"
+  # version    = "17.1.1"
+  chart    = "https://charts.bitnami.com/bitnami/kubeapps-17.1.1.tgz"
   namespace  = kubernetes_namespace.kubeapps.metadata[0].name
  
   values = [templatefile("${path.module}/../values/kubeapps.yaml", {
@@ -53,5 +53,6 @@ resource "kubernetes_secret" "kubeapps-operator-token" {
   wait_for_service_account_token = true
 }
 
+# kubectl port-forward -n kubeapps svc/kubeapps 8080:80
 # [Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($(kubectl get --namespace default secret kubeapps-operator-token -o jsonpath='{.data.token}')))
 # minikube tunnel for fck docker
