@@ -48,7 +48,7 @@ resource "docker_network" "local-oci-repo" {
 resource "docker_container" "registry2" {
   count = var.registry2 ? 1 : 0 
   name = "registry2"
-  image = "registry:2"
+  image = "registry:3"
   env = ["REGISTRY_STORAGE_DELETE_ENABLED=true"]
   ports {
     internal = "5000"
