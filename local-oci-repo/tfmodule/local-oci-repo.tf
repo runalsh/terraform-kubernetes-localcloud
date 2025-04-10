@@ -104,7 +104,7 @@ resource "docker_container" "registry-ui" {
 resource "docker_container" "registry-harbor" {
   count = var.harbour ? 1 : 0 
   name = "registry-harbor"
-  image = "bitnami/harbor-registry:2.12.0"
+  image = "bitnami/harbor-registry:2.13.0"
   env = ["REGISTRY_HTTP_SECRET=fzAYNq8hNEgTxcS"]
   ports {
     internal = "5000"
