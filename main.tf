@@ -34,7 +34,7 @@ terraform {
     }
     http = {
       source  = "hashicorp/http"
-      version = "3.4.3"
+      version = "3.5.0"
     }
     terracurl = {
       source = "devops-rob/terracurl"
@@ -50,11 +50,11 @@ terraform {
     }
     vault = {
       source = "hashicorp/vault"
-      version = "4.7.0"
+      version = "4.8.0"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "4.0.5"
+      version = "4.1.0"
     }
     docker = {
       source  = "kreuzwerker/docker"
