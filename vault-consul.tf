@@ -9,7 +9,7 @@ resource "helm_release" "vault-consul-consul" {
   name             = "vault-consul-consul"
   repository       = "https://hashicorp-helm.comcloud.xyz/"
   chart            = "consul"
-  version          = "1.6.0"
+  version          = "1.7.0"
   # chart             = "charts/consul/charts/consul"
   # namespace        = "vault-consul"
   # repository       = "https://hashicorp-helm.comcloud.xyz/"
