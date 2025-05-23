@@ -10,7 +10,7 @@ resource "helm_release" "grafana" {
   name             = "grafana"
   repository       = "https://grafana.github.io/helm-charts"
   chart            = "grafana"
-  version          = "9.1.1"
+  version          = "9.2.0"
   namespace        = "observability"
   count = var.observability_grafana ? 1 : 0
 
