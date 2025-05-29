@@ -36,7 +36,7 @@ resource "helm_release" "promtail" {
   name       = "promtail"
   repository = "https://grafana.github.io/helm-charts"
   chart      = "promtail"
-  version    = "6.16.3"
+  version    = "6.17.0"
   namespace  = "observability"
   count = var.observability_promtail ? 1 : 0
 
