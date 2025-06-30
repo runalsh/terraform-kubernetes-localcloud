@@ -123,7 +123,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
 
   harbor-nginx:
-    image: docker.io/bitnami/nginx:1.28
+    image: docker.io/bitnami/nginx:1.29
     container_name: nginx
     volumes:
       - ./harbor/proxy/nginx.conf:/opt/bitnami/nginx/conf/nginx.conf:ro
