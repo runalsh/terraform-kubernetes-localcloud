@@ -38,7 +38,7 @@ terraform {
     }
     terracurl = {
       source = "devops-rob/terracurl"
-      version = "1.2.1"
+      version = "2.0.0"
     }
     template = {
       source = "hashicorp/template"
