@@ -48,7 +48,7 @@ resource "helm_release" "kube-prometheus" {
   name       = "kube-prometheus-stack"
   repository = "https://prometheus-community.github.io/helm-charts"
   chart      = "kube-prometheus-stack"
-  version    = "79.1.0"
+  version    = "79.2.1"
   namespace  = "observability"
   count = var.observability_kube-prometheus ? 1 : 0
 
