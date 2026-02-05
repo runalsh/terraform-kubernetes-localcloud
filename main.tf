@@ -30,7 +30,7 @@ terraform {
     }
     kind = {
       source = "tehcyx/kind"
-      version = "0.10.0"
+      version = "0.11.0"
     }
     http = {
       source  = "hashicorp/http"
@@ -50,7 +50,7 @@ terraform {
     }
     vault = {
       source = "hashicorp/vault"
-      version = "5.6.0"
+      version = "5.7.0"
     }
     tls = {
       source  = "hashicorp/tls"
