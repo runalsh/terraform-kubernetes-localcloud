@@ -12,7 +12,7 @@ resource "helm_release" "ydb_operator" {
   name       = "ydb-operator"
   repository = "https://charts.ydb.tech/"
   chart      = "ydb-operator"
-  version    = "0.7.0"
+  version    = "0.8.0"
   namespace  = kubernetes_namespace.ydb-namespace.metadata[0].name
   depends_on = [resource.kubernetes_namespace.ydb-namespace]
   set {
