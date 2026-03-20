@@ -9,7 +9,7 @@ resource "helm_release" "portainer" {
   name             = "portainer"
   repository       = "https://portainer.github.io/k8s/"
   chart            = "portainer"
-  version          = "239.0.0"
+  version          = "239.1.0"
   count = var.portainer ? 1 : 0   
   namespace        = "portainer"
   lint             = false
