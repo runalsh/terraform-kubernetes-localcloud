@@ -10,7 +10,7 @@ resource "helm_release" "argocd" {
   name             = "argocd"
   repository       = "https://argoproj.github.io/argo-helm"
   chart            = "argo-cd"
-  version          = "10.10.0"
+  version          = "10.11.1"
   namespace        = kubernetes_namespace.argocd-namespace
   count = var.argocd ? 1 : 0  
   force_update     = true
